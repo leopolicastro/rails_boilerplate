@@ -9,6 +9,7 @@ This is a boilerplate Rails project that uses:
 - the `administrate` gem [docs](https://github.com/thoughtbot/administrate)
 - the `pagy` gem [docs](https://github.com/ddnexus/pagy)
 - The `trix` gem [docs](https://github.com/maclover7/trix)
+- The `bootstrap` gem [docs](https://github.com/twbs/bootstrap-rubygem)
 - ActiveText enabled for `trix`.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 
