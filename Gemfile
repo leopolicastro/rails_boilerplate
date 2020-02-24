@@ -10,6 +10,8 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'devise'
 gem 'hirb'
 gem 'jquery-rails'
+gem 'trix'
+ gem 'pagy'
 
 gem 'react_on_rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
