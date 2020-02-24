@@ -16,7 +16,7 @@
     <% end %>
     <div class="dropdown-divider"></div>
     <% if user_signed_in? && current_user.admin? %>
-      <%= link_to "Admin", new_user_session_path,
+      <%= link_to "Admin", admin_root_path,
                 method: :get,
                 class: "dropdown-item" %>
     <% end %>
