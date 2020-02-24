@@ -16,9 +16,9 @@ This is a boilerplate Rails project that uses:
 
 ## Setup
 
-- `rails db:create db:migrate db:seed` (with your Postgres server up and running)
 - `bundle`
 - `yarn`
+- `rails db:create db:migrate db:seed` (with your Postgres server up and running)
 - `EDITOR='vim' rails credentials:edit --environment=development` and configure S3 credentials (optional)
 - `rails s`
 
