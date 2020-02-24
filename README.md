@@ -5,15 +5,23 @@ This is a boilerplate Rails project that uses:
 - `ruby ~> 2.7`
 - `postgresql` as the database
 - `webpacker` with `react`
-- the `react_on_rails` gem
+- the `react_on_rails` gem [docs](https://github.com/shakacode/react_on_rails)
 - the `administrate` gem [docs](https://github.com/thoughtbot/administrate)
+- the `pagy` gem [docs](https://github.com/ddnexus/pagy)
+- The `trix` gem [docs](https://github.com/maclover7/trix)
+- ActiveText enabled for `trix`.
+- ActiveStorage enabled and configured for an S3 compatible bucket.
 
 ## Setup
 
-- `rails db:create` (with your Postgres server up and running)
+- `rails db:create db:migrate db:seed` (with your Postgres server up and running)
 - `bundle`
 - `yarn`
+- `EDITOR='vim' rails credentials:edit --environment=development` and configure S3 credentials (optional)
 - `rails s`
+
+Sign in to admin account with `admin@admin.com` and to user account with `some@guy.com` or `some@gal.com`.  
+Password is defaulted to `password` for all seeded accounts.
 
 ## Deployment
 
