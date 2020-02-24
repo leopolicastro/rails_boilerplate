@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   get 'welcome/index'
   get 'hello_world', to: 'hello_world#index'
 
-  devise_for :users
+  devise_for :users do
+    delete '/users/sign_out' => 'devise/sessions#destroy'
+  end
 
   authenticated :user, ->(u) { u.admin? } do
     namespace :admin do

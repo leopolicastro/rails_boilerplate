@@ -5,20 +5,19 @@
   <div class="dropdown-menu">
     <!-- Dropdown menu links -->
     <% if user_signed_in? %>
-      <%= link_to "Account", edit_user_registration_url, class: "dropdown-item #{'active' if current_page?(edit_user_registration_url)}" %>
-      <%= link_to "Sign Out", destroy_user_session_url,
-                method: :delete,
+      <%= link_to "Account", edit_user_registration_url, class: "dropdown-item" %>
+      <%= link_to "Sign Out",  destroy_user_session_path(), 
                 class: "dropdown-item" %>
     <% else %>
       <%= link_to "Sign In", new_user_session_path,
                 method: :get,
-                class: "dropdown-item #{'active' if current_page?(new_user_session_url)}" %>
+                class: "dropdown-item" %>
     <% end %>
     <% if user_signed_in? && current_user.admin? %>
       <div class="dropdown-divider"></div>
       <%= link_to "Admin", admin_root_path,
                 method: :get,
-                class: "dropdown-item #{'active' if current_page?(admin_root_url)}" %>
+                class: "dropdown-item" %>
     <% end %>
   </div>
 </div>
