@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'welcome/index'
+  get 'hello_world', to: 'hello_world#index'
+
   devise_for :users
 
   authenticated :user, ->(u) { u.admin? } do
@@ -11,8 +14,12 @@ Rails.application.routes.draw do
     end
   end
 
-  get 'welcome/index'
-  get 'hello_world', to: 'hello_world#index'
+  authenticated :user do
+    get 'home/index'
+
+    root to: 'home#index', as: :user_root
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root to: 'welcome#index'

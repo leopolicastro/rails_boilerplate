@@ -1,5 +1,5 @@
 {
-  "name": "final_project_template",
+  "name": "rails_template",
   "private": true,
   "dependencies": {
     "@babel/preset-react": "^7.8.3",
