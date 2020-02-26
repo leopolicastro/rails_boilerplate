@@ -15,3 +15,13 @@
 @import "bootstrap";
 @import "trix";
 @import "./actiontext.scss";
+
+.mobile-form {
+  width: 30%;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 812px) {
+  .mobile-form {
+    width: 100% !important;
+  }
+}
