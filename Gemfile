@@ -11,6 +11,7 @@ gem 'devise'
 gem 'jquery-rails'
 gem 'pagy'
 gem 'react_on_rails'
+gem 'sidekiq'
 gem 'trix'
 gem 'whenever', require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
