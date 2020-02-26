@@ -11,6 +11,7 @@ This is a boilerplate Rails project that uses:
 - The `trix` gem [docs](https://github.com/maclover7/trix)
 - The `bootstrap` gem [docs](https://github.com/twbs/bootstrap-rubygem)
 - The `whenever` gem [docs](https://github.com/javan/whenever)
+- The `faker` gem [docs](https://github.com/faker-ruby/faker)
 - ActiveText enabled for `trix`.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 

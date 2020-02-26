@@ -8,7 +8,6 @@ ruby '>= 2.7'
 gem 'administrate'
 gem 'bootstrap', '~> 4.4.1'
 gem 'devise'
-gem 'hirb'
 gem 'jquery-rails'
 gem 'pagy'
 gem 'react_on_rails'
@@ -42,6 +41,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker'
+  gem 'hirb'
 end
 
 group :development do
