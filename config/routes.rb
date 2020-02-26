@@ -17,6 +17,10 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
+    if Rails.env.development?
+      mount LetterOpenerWeb::Engine, at: '/letter_opener'
+    end
+
     get 'home/index'
 
     root to: 'home#index', as: :user_root

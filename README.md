@@ -13,6 +13,7 @@ This is a boilerplate Rails project that uses:
 - The `whenever` gem [docs](https://github.com/javan/whenever)
 - The `faker` gem [docs](https://github.com/faker-ruby/faker)
 - The `sidekiq` gem [docs](https://github.com/mperham/sidekiq/wiki/Active-Job)
+- The `letter_opener_web` gem [docs](https://github.com/fgrehm/letter_opener_web)
 - ActiveText enabled for `trix`.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 
