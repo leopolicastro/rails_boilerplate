@@ -1,17 +1,20 @@
 <div class="shadow mx-auto p-5 border form-group mobile-form">
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autofocus: true, autocomplete: "off", placeholder: 'name', class: 'text-center form-control' %>
+    </div>
+    <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'password', class: 'text-center form-control' %>
+      <%= f.email_field :email, autocomplete: "email", placeholder: 'password', class: 'text-center form-control' %>
     </div>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
     <div class="field">
-      <%= f.label :password %> 
+      <%= f.label :password %>
       <%= f.password_field :password, autocomplete: "new-password", placeholder: 'new password', class: 'text-center form-control' %>
       <% if @minimum_password_length %>
         <br />
