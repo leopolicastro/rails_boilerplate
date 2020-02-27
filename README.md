@@ -7,13 +7,15 @@ This is a boilerplate Rails project that uses:
 - `webpacker` with `react`
 - the `react_on_rails` gem [docs](https://github.com/shakacode/react_on_rails)
 - the `administrate` gem [docs](https://github.com/thoughtbot/administrate)
-- the `pagy` gem [docs](https://github.com/ddnexus/pagy)
 - The `trix` gem [docs](https://github.com/maclover7/trix)
 - The `bootstrap` gem [docs](https://github.com/twbs/bootstrap-rubygem)
 - The `whenever` gem [docs](https://github.com/javan/whenever)
 - The `faker` gem [docs](https://github.com/faker-ruby/faker)
 - The `sidekiq` gem [docs](https://github.com/mperham/sidekiq/wiki/Active-Job)
 - The `letter_opener_web` gem [docs](https://github.com/fgrehm/letter_opener_web)
+- The `annotate` gem [docs](https://github.com/ctran/annotate_models)
+- The `better_errors` gem [docs](https://github.com/BetterErrors/better_errors)
+- The `kaminari` gem [docs](https://github.com/amatsuda/kaminari)
 - ActiveText enabled for `trix`.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 
