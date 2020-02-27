@@ -11,11 +11,11 @@ This is a boilerplate Rails project that uses:
 - The `bootstrap` gem [docs](https://github.com/twbs/bootstrap-rubygem)
 - The `whenever` gem [docs](https://github.com/javan/whenever)
 - The `faker` gem [docs](https://github.com/faker-ruby/faker)
-- The `sidekiq` gem [docs](https://github.com/mperham/sidekiq/wiki/Active-Job)
+- The `sidekiq` gem [docs](https://github.com/mperham/sidekiq/wiki/Getting-Started#rails)
 - The `letter_opener_web` gem [docs](https://github.com/fgrehm/letter_opener_web)
 - The `annotate` gem [docs](https://github.com/ctran/annotate_models)
 - The `better_errors` gem [docs](https://github.com/BetterErrors/better_errors)
-- The `kaminari` gem [docs](https://github.com/amatsuda/kaminari)
+- The `kaminari` gem [docs](https://github.com/amatsuda/kaminari#the-page-parameter-is-in-paramspage)
 - ActiveText enabled for `trix`.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 

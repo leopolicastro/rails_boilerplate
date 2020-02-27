@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   authenticated :user, ->(u) { u.admin? } do
     namespace :admin do
       resources :users
+      require 'sidekiq/web'
+      mount Sidekiq::Web => '/sidekiq'
 
       root to: 'users#index'
     end
