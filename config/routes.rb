@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   devise_for :users do
     delete '/users/sign_out' => 'devise/sessions#destroy'
   end
+  devise_for controllers: { sessions: 'users/sessions' }
 
   authenticated :user, ->(u) { u.admin? } do
     namespace :admin do

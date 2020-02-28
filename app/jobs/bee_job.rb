@@ -5,5 +5,7 @@ class BeeJob < ApplicationJob
 
   def perform(foo, bar)
     # Do something later
+    p foo + bar
+    p '********************************'
   end
 end

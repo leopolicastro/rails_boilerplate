@@ -7,6 +7,7 @@ class AnnouncementsController < ApplicationController
   # GET /announcements.json
   def index
     @announcements = Announcement.all
+    BeeJob.perform_now(5, 5)
   end
 
   # GET /announcements/1
