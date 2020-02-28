@@ -7,8 +7,8 @@ for all resources in the admin dashboard,
 as defined by the routes in the `admin/` namespace
 %>
 <nav class="navigation" role="navigation">
+  <%= link_to "Back To App", root_url, class: "dropdown-item" %>
   <% Administrate::Namespace.new(namespace).resources.each do |resource| %>
-    <%= link_to "Back To App", root_url, class: "dropdown-item" %>
     <%= link_to(
       display_resource_name(resource),
       [namespace, resource_index_route_key(resource)],

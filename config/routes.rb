@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   authenticated :user, ->(u) { u.admin? } do
     namespace :admin do
+      resources :announcements
       resources :users
       require 'sidekiq/web'
       mount Sidekiq::Web => '/sidekiq'
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
   end
 
   authenticated :user do
+    resources :announcements, only: %i[index show]
+
     if Rails.env.development?
       mount LetterOpenerWeb::Engine, at: '/letter_opener'
     end
