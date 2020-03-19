@@ -7,9 +7,11 @@ This is a boilerplate Rails project that uses:
 - `webpacker` with `react`
 - the `react-rails` gem [docs](https://github.com/reactjs/react-rails)
 - the `administrate` gem [docs](https://github.com/thoughtbot/administrate)
-- The `bootstrap` gem [docs](https://github.com/twbs/bootstrap-rubygem)
+- The `bootstrap` [docs](https://getbootstrap.com)
 - The `faker` gem [docs](https://github.com/faker-ruby/faker)
 - The `annotate` gem [docs](https://github.com/ctran/annotate_models)
+- The `aws-sdk-s3` gem [docs](https://github.com/aws/aws-sdk-ruby)
+- the `devise` gem [docs](https://github.com/heartcombo/devise)
 - ActiveText enabled for.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 
@@ -25,8 +27,6 @@ Sign in to admin account with `admin@admin.com` and to user account with `some@g
 Password is defaulted to `password` for all seeded accounts.
 
 ## Deployment
-
-### The Node.js buildback must be added first or precompiling of assets may fail on Heroku: [See this issue](https://github.com/rails/webpacker/issues/1164#issuecomment-443474860)
 
 - `heroku create your-app-name`
 - `git push heroku master`
