@@ -1,1 +1,3 @@
-web: rails s 
+web: rails s
+
+client: ./bin/webpack-dev-server   
