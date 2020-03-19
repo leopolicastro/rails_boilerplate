@@ -9,5 +9,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: 'admin', email: 'admin@admin.com', password: 'password', admin: true)
+User.create(name: 'guy', email: 'some@guy.com', password: 'password')
 
 puts "#{User.count} users created"
