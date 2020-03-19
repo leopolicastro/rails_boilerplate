@@ -5,6 +5,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 gem 'administrate', '>= 0.13.0'
+gem 'aws-sdk-s3', require: false
 gem 'devise'
 gem 'devise-bootstrap-views', '~> 1.0'
 gem 'faker'
