@@ -11,7 +11,8 @@ This is a boilerplate Rails project that uses:
 - The `faker` gem [docs](https://github.com/faker-ruby/faker)
 - The `annotate` gem [docs](https://github.com/ctran/annotate_models)
 - The `aws-sdk-s3` gem [docs](https://github.com/aws/aws-sdk-ruby)
-- the `devise` gem [docs](https://github.com/heartcombo/devise)
+- The `devise` gem [docs](https://github.com/heartcombo/devise)
+- The `devise-token_authenticatable` gem [docs](https://github.com/baschtl/devise-token_authenticatable)
 - ActiveText enabled for.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 

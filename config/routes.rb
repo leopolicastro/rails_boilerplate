@@ -2,14 +2,18 @@
 
 Rails.application.routes.draw do
   authenticated :user, ->(u) { u.admin? } do
+    resources :announcements
+
     namespace :admin do
       resources :users
+      resources :announcements
 
-      root to: 'users#index'
+      root to: 'announcements#index'
     end
   end
 
   authenticated :user do
+    resources :announcements, only: %i[index show]
   end
 
   devise_for :users

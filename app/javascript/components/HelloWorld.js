@@ -24,19 +24,15 @@ const HelloWorld = props => {
   };
 
   const fetchIt = () => {
-    let url = "/api/v1/item_entries";
-    let config = {
-      headers: {
-        Authorization: "Bearer CkEHqdUoEFMaZbmXvBaDtEa3"
-      }
-    };
-    fetch(url, config)
+    let url = "/announcements.json?auth_token=yzXxRzvevBsymBRU14Uu";
+    fetch(url)
       .then(data => {
         return data.json();
       })
       .then(res => {
         console.log(res);
       });
+    alert("check the logs");
   };
 
   return (
@@ -65,9 +61,9 @@ const HelloWorld = props => {
               +
             </button>
           </div>
-          {/* <button onClick={fetchIt} className="btn btn-primary">
+          <button onClick={fetchIt} className="btn btn-primary">
             Fetch
-          </button> */}
+          </button>
         </div>
       </div>
     </div>
