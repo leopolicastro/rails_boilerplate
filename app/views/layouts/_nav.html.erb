@@ -16,5 +16,10 @@
       </li>
     </ul>
   </div>
-  <%= render 'layouts/dropdown', class: 'mr-5'%>
+  <div class='d-flex align-items-center'>
+    <% if user_signed_in? %>
+      <%= current_user.name %>
+    <% end %>
+    <%= render 'layouts/dropdown', class: 'mr-5'%>
+  </div>
 </nav>
