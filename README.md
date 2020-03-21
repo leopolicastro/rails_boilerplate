@@ -14,7 +14,7 @@ This is a boilerplate Rails project that uses:
 - The `devise` gem [docs](https://github.com/heartcombo/devise)
 - The `devise-token_authenticatable` gem [docs](https://github.com/baschtl/devise-token_authenticatable)
 - The `kaminari` gem [docs](https://github.com/kaminari/kaminari)
-- ActiveText enabled for.
+- ActiveText enabled.
 - ActiveStorage enabled and configured for an S3 compatible bucket.
 
 ## Setup
