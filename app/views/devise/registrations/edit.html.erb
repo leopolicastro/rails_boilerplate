@@ -27,14 +27,12 @@
     <%= f.submit t('.update'), class: 'btn btn-primary' %>
   </div>
 <% end %>
-<% if user_signed_in? %>
-  <h6>API Token</h6>
-  <div class="my-3">
-    <code class="rounded" style="background-color:lightgrey; padding: 1rem; color: black;">
-      <%= current_user.authentication_token %></code>
-  </div>
-  <%= link_to "Reset Token", api_token_path, method: :post, class: "mt-3 btn btn-primary" %>
-  <%= %>
-<% end %>
+<h6>API Token</h6>
+<div class="my-3">
+  <code class="rounded" style="background-color:lightgrey; padding: 1rem; color: black;">
+    <%= current_user.authentication_token %></code>
+</div>
+<%= link_to "Reset Token", api_token_path, method: :post, class: "mt-3 btn btn-primary" %>
+<%= %>
 <p><%= t('.unhappy') %>? <%= link_to t('.cancel_my_account'), registration_path(resource_name), data: { confirm: t('.are_you_sure') }, method: :delete %>.</p>
 <%= link_to t('.back'), :back %>
