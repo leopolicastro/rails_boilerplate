@@ -1,19 +1,17 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @announcement.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @announcement.body %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @announcement.category %>
-</p>
-
-<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
-<%= link_to 'Back', announcements_path %>
+<div class="shadow-lg p-5">
+  <p>
+    <strong>Title:</strong>
+    <%= @announcement.title %>
+  </p>
+  <p>
+    <strong>Body:</strong>
+    <%= @announcement.body %>
+  </p>
+  <p>
+    <strong>Category:</strong>
+    <%= @announcement.category %>
+  </p>
+  <%= link_to 'Edit', edit_announcement_path(@announcement), class: 'btn-sm btn-primary' %> |
+  <%= link_to 'Back', announcements_path, class: 'btn-sm btn-primary' %>
+</div>
