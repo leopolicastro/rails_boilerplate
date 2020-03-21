@@ -25,7 +25,7 @@ const HelloWorld = props => {
   };
 
   const fetchAnnouncements = () => {
-    let url = "/announcements.json?auth_token=yzXxRzvevBsymBRU14Uu";
+    let url = `/announcements.json?auth_token=${props.token}`;
     fetch(url)
       .then(data => {
         return data.json();
