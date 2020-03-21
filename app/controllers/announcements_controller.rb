@@ -1,16 +1,18 @@
+# frozen_string_literal: true
+
 class AnnouncementsController < ApplicationController
-  before_action :set_announcement, only: [:show, :edit, :update, :destroy]
+  before_action :set_announcement, only: %i[show edit update destroy]
 
   # GET /announcements
   # GET /announcements.json
   def index
-    @announcements = Announcement.all
+    # @announcements = Announcement.all
+    @announcements = Announcement.order(:title).page params[:page]
   end
 
   # GET /announcements/1
   # GET /announcements/1.json
-  def show
-  end
+  def show; end
 
   # GET /announcements/new
   def new
@@ -18,8 +20,7 @@ class AnnouncementsController < ApplicationController
   end
 
   # GET /announcements/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /announcements
   # POST /announcements.json
@@ -62,13 +63,14 @@ class AnnouncementsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_announcement
-      @announcement = Announcement.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def announcement_params
-      params.require(:announcement).permit(:title, :body, :category)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_announcement
+    @announcement = Announcement.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def announcement_params
+    params.require(:announcement).permit(:title, :body, :category)
+  end
 end
