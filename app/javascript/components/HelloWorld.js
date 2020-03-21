@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const HelloWorld = props => {
   const [count, setCount] = useState(0);
+  const [announcements, setAnnouncements] = useState([]);
 
   const handleAdd = () => {
     const currentCount = count;
@@ -23,21 +24,43 @@ const HelloWorld = props => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const fetchIt = () => {
+  const fetchAnnouncements = () => {
     let url = "/announcements.json?auth_token=yzXxRzvevBsymBRU14Uu";
     fetch(url)
       .then(data => {
         return data.json();
       })
       .then(res => {
-        console.log(res);
+        setAnnouncements(res);
       });
-    alert("check the logs");
   };
+
+  useEffect(fetchAnnouncements, []);
 
   return (
     <div className="text-center mx-auto shadow-xl p-20 w-1/2">
       <div>
+        <div className="d-flex flex-wrap">
+          {announcements.length > 0 ? (
+            announcements.map(announcement => {
+              return (
+                <div
+                  key={announcement.id}
+                  className="card m-2 mx-auto"
+                  style={{ width: "100%" }}
+                >
+                  {/* <img src="..." className="card-img-top" alt="..." /> */}
+                  <div className="card-body">
+                    <h5 className="card-title">{announcement.title}</h5>
+                    <p className="card-text">{announcement.body}</p>
+                  </div>
+                </div>
+              );
+            })
+          ) : (
+            <div></div>
+          )}
+        </div>
         <div>
           {props.greeting} {formData.hello}
         </div>
@@ -61,9 +84,6 @@ const HelloWorld = props => {
               +
             </button>
           </div>
-          <button onClick={fetchIt} className="btn btn-primary">
-            Fetch
-          </button>
         </div>
       </div>
     </div>
